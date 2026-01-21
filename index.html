@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/icons/hxh-touch-icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/pagina_inicial.css">
+
+    <title>Projeto Hunter x Hunter</title>
+
+</head>
+
+<body id="top">
+
+
+    <!-- ================ Menu Lateral Fixo ================ -->
+    <aside class="sidebar">
+
+        <!-- Botão hamburguer -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"></button>
+
+    </aside>
+
+
+    <!-- ================= OVERLAY DO MENU ================= -->
+    <div class="menu-overlay">
+
+        <button class="menu-close" aria-label="Fechar menu">
+            X
+        </button>
+
+        <nav class="menu-content">
+            <ul>
+                <li><a href="#">Introdução</a></li>
+                <li><a href="#">História</a></li>
+                <li><a href="#">Personagens</a></li>
+                <li><a href="#">Sistema de Poder</a></li>
+                <li><a href="#">Trilha Sonora</a></li>
+                <li><a href="#">Autor</a></li>
+            </ul>
+
+             <!-- imagem do Gon transparente -->
+            <div class="menu-background-image">
+                <img src="assets/images/gon_menu.png" alt="gon_menu">
+            </div>
+        </nav>
+    </div>
+
+    <!-- =============== Conteúdo Principal ================ -->
+    <main class="main-content">
+
+         <section class="hero">
+            <!-- Imagem Principal -->
+            <div class="hero-image">
+                <img src="assets/images/imagem_principal.jpg" alt="imagem_princial">
+            </div>
+
+            <div class="hero-info">
+                <!-- Idioma -->
+                <div class="language-switch">
+                    <button>PT</button>
+                    <button>EN</button>
+                </div>
+
+                 <!-- Logo Hunter x Hunter/frase -->
+                <img src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
+                <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.</p>
+            </div>
+         </section>
+
+
+         <!-- === Faixa de Vídeo === -->
+<section class="video-section">
+
+    <!-- Preview do vídeo -->
+    <div class="video-preview">
+
+        <div class="video-overlay">
+            <span class="play-btn">▶</span>
+        </div>
+
+        <iframe
+            src="https://www.youtube.com/embed/bfv-VaaAlxc?mute=1&autoplay=1&controls=0&loop=1&playlist=bfv-VaaAlxc"
+            title="Hunter x Hunter Trailer"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+    <!-- Modal do vídeo -->
+    <div class="video-modal">
+
+        <button class="video-close">✕</button>
+
+        <iframe
+            src="https://www.youtube.com/embed/bfv-VaaAlxc?autoplay=1"
+            title="Hunter x Hunter Trailer"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+    
+</section>
+
+
+        <!-- ================= Introdução ================== -->
+        <section class="introduction" id="introduction">
+            <h2>Introdução</h2>
+            <p>
+                Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar. Essas pessoas são conhecidas como Hunters.
+            </p>
+        </section>
+
+        <!-- ===== VOLTAR AO TOPO ===== -->
+        <div class="back-to-top">
+            <a href="#top">Topo da página</a>
+        </div>
+
+        <!-- ===== CRÉDITOS ===== -->
+        <footer class="credits">
+            <p>
+                Projeto conceitual desenvolvido por <a href="https://github.com/Cayo13y" target="_blank">Cayo B.Gomes</a>.<br>
+                Feito para fins educacionais e portfólio.
+            </p>
+        </footer>
+    </main>
+
+</body>
+</html>
