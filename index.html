@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,16 @@
 
     <link rel="stylesheet" href="styles/pagina_inicial.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
     <title>Projeto Hunter x Hunter</title>
 
 </head>
 
 <body id="top">
 
-
-    <!-- ================ Menu Lateral Fixo ================ -->
+    <!-- ================== Menu Lateral Fixo ================== -->
     <aside class="sidebar">
 
         <!-- Botão hamburguer -->
@@ -24,7 +27,7 @@
     </aside>
 
 
-    <!-- ================= OVERLAY DO MENU ================= -->
+    <!--  Overlay do menu  -->
     <div class="menu-overlay">
 
         <button class="menu-close" aria-label="Fechar menu">
@@ -41,17 +44,19 @@
                 <li><a href="#">Autor</a></li>
             </ul>
 
-             <!-- imagem do Gon transparente -->
+            <!-- imagem do Gon transparente -->
             <div class="menu-background-image">
-                <img src="assets/images/gon_menu.png" alt="gon_menu">
+                <img src="assets/images/gon_menu.png" alt="Gon Freecss em fundo do menu">
             </div>
         </nav>
     </div>
 
-    <!-- =============== Conteúdo Principal ================ -->
+
+
+    <!-- ================= Conteúdo Principal ================== -->
     <main class="main-content">
 
-         <section class="hero">
+        <section class="hero">
             <!-- Imagem Principal -->
             <div class="hero-image">
                 <img src="assets/images/imagem_principal.jpg" alt="imagem_princial">
@@ -64,72 +69,78 @@
                     <button>EN</button>
                 </div>
 
-                 <!-- Logo Hunter x Hunter/frase -->
-                <img src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
-                <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.</p>
+                <!-- Logo Hunter x Hunter/frase -->
+                    <div class="logo-text">
+                        <img src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
+                        
+                        <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a
+                                href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
+                        </p>
+                    </div>
             </div>
-         </section>
+        </section>
 
 
-         <!-- === Faixa de Vídeo === -->
-<section class="video-section">
+        <!-- === Faixa de Vídeo === -->
+        <section class="video-section">
 
-    <!-- Preview do vídeo -->
-    <div class="video-preview">
+            <!-- Preview do vídeo -->
+            <div class="video-preview">
 
-        <div class="video-overlay">
-            <span class="play-btn">▶</span>
-        </div>
+                <div class="video-overlay">
+                    <span class="play-btn">▶</span>
+                </div>
 
-        <iframe
-            src="https://www.youtube.com/embed/bfv-VaaAlxc?mute=1&autoplay=1&controls=0&loop=1&playlist=bfv-VaaAlxc"
-            title="Hunter x Hunter Trailer"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
+                <iframe
+                    src="https://www.youtube.com/embed/bfv-VaaAlxc?mute=1&autoplay=1&controls=0&loop=1&playlist=bfv-VaaAlxc"
+                    title="Hunter x Hunter Trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
 
-    </div>
+            </div>
 
-    <!-- Modal do vídeo -->
-    <div class="video-modal">
+            <!-- Modal do vídeo -->
+            <div class="video-modal">
 
-        <button class="video-close">✕</button>
+                <button class="video-close">✕</button>
 
-        <iframe
-            src="https://www.youtube.com/embed/bfv-VaaAlxc?autoplay=1"
-            title="Hunter x Hunter Trailer"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
+                <iframe src="https://www.youtube.com/embed/bfv-VaaAlxc?autoplay=1" title="Hunter x Hunter Trailer"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
 
-    </div>
-    
-</section>
+            </div>
+
+        </section>
 
 
-        <!-- ================= Introdução ================== -->
+        <!-- ============= Introdução ============== -->
         <section class="introduction" id="introduction">
             <h2>Introdução</h2>
             <p>
-                Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar. Essas pessoas são conhecidas como Hunters.
+                Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas
+                enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar.
+                Essas pessoas são conhecidas como Hunters.
             </p>
         </section>
 
-        <!-- ===== VOLTAR AO TOPO ===== -->
+        <!--  Voltar ao topo  -->
         <div class="back-to-top">
             <a href="#top">Topo da página</a>
         </div>
 
-        <!-- ===== CRÉDITOS ===== -->
+        <!--  Créditos  -->
         <footer class="credits">
             <p>
-                Projeto conceitual desenvolvido por <a href="https://github.com/Cayo13y" target="_blank">Cayo B.Gomes</a>.<br>
+                Projeto conceitual desenvolvido por <a href="https://github.com/Cayo13y" target="_blank">Cayo
+                    B.Gomes</a>.<br>
                 Feito para fins educacionais e portfólio.
             </p>
         </footer>
     </main>
 
+    <!-- ===== JavaScript do Menu Lateral ===== -->
+    <script src="scripts/menu_lateral.js"></script>
+
+    <!-- ===== JavaScript da Página Inicial ===== -->
+    <script src="scripts/pagina_inicial.js"></script>
 </body>
 </html>
