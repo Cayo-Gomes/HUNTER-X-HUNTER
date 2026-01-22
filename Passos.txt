@@ -1,0 +1,8 @@
+1. Reset / global (já feito ✅)
+2. Header / topo
+3. Menu expandido
+4. Vídeo
+5. Introdução
+6. Botão voltar ao topo
+7. Footer / créditos
+8. Responsivo (media queries)
