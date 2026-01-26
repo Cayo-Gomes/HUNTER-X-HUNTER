@@ -145,6 +145,34 @@ section {/*Seções*/
 
 
 
+/* ==================== Menu Lateral ===================== */
+.sidebar {/*Seção vertical*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    z-index: 1000;}
+
+.menu-toggle {/*Botão hamburger*/
+    width: 30px;
+    height: 22px;
+    position: relative;}
+
+.menu-toggle::before,
+.menu-toggle::after,
+.menu-toggle span {
+    content: "";
+    position: relative;
+    left: 0;}
+/*=========================================================*/
+
+
+
+
 
 
 
