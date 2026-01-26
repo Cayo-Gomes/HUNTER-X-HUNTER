@@ -143,7 +143,7 @@ section {/*Seções*/
     color: #757575;}
 /*=========================================================*/
 
-/*Mais um teste*/
+
 
 /* ==================== Menu Lateral ===================== */
 .sidebar {/*Seção vertical*/
@@ -162,7 +162,7 @@ section {/*Seções*/
     height: 22px;
     position: relative;}
 
-.menu-toggle::before,
+.menu-toggle::before, /*função do meu depois*/
 .menu-toggle::after,
 .menu-toggle span {
     content: "";
