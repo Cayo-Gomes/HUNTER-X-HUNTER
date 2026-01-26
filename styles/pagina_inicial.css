@@ -166,7 +166,7 @@ section {/*Seções*/
 .menu-toggle::after,
 .menu-toggle span {
     content: "";
-    position: relative;
+    position: relative; /*relative*/
     left: 0;}
 /*=========================================================*/
 
