@@ -168,6 +168,12 @@ section {/*Seções*/
     content: "";
     position: relative; /*relative*/
     left: 0;}
+
+.menu-toggle::before {
+    top: 0;}
+
+.menu-toggle span {
+    top: 9px;}
 /*=========================================================*/
 
 
