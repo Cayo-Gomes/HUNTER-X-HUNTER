@@ -172,7 +172,7 @@ section {/*Seções*/
 .menu-toggle::before {
     top: 0;}
 
-.menu-toggle span {
+.menu-toggle span { /*comentario*/
     top: 9px;}
 /*=========================================================*/
 
