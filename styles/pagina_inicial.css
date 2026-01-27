@@ -162,12 +162,18 @@ section {/*Seções*/
     height: 22px;
     position: relative;}
 
-.menu-toggle::before, /*função do meu depois*/
+.menu-toggle::before, 
 .menu-toggle::after,
 .menu-toggle span {
     content: "";
     position: relative; /*relative*/
     left: 0;}
+
+.menu-toggle::before {
+    top: 0;}
+
+.menu-toggle span {
+    top: 9px;}
 /*=========================================================*/
 
 
