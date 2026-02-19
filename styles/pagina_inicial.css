@@ -32,38 +32,44 @@
 
 
 /*================== Configurações Gerais  ================*/
-*{ /*seletor universal*/
+*{ /* Seletor Universal */
     margin: 0;
     padding: 0;
     box-sizing: border-box;}
 
-body { /*Body*/
+body { /* Body */
     font-family: var(--fonte-principal);
     background-color: var(--cor-branco);
     color: var(--cor-preto);
     overflow-x: hidden;}
 
-a{ /*Links*/
+a{ /* Link s*/
     text-decoration: none;
     color: inherit;}
 
-img { /*Imagens*/
+img { /* Imagens */
     max-width: 100%;
     display: block;}
 
-button { /*Botões*/
+button { /* Botões */
     background: none;
     border: none;
     cursor: pointer;
     font-family: inherit;}
 
-h1, h2, h3 { /*Títulos*/
+h1, h2, h3 { /* Títulos */
     font-weight: 700;
     letter-spacing: 1px;}
 
-section {/*Seções*/
+section {/* Seções */
     width: 100%;
     position: relative;}
+
+body.modal-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
 /*=========================================================*/
 
 
@@ -146,7 +152,7 @@ section {/*Seções*/
 
 
 /* ==================== Menu Lateral ===================== */
-.sidebar {/*Seção vertical*/
+.sidebar {/* Seção vertical */
     position: fixed;
     top: 0;
     left: 0;
@@ -157,16 +163,16 @@ section {/*Seções*/
     padding-top: 30px;
     z-index: 1000;}
 
-.menu-toggle {/*Botão hamburger*/
+.menu-toggle {/* Botão hamburger */
     width: 30px;
     height: 22px;
     position: relative;}
 
-.menu-toggle::before, /*função do meu depois*/
+.menu-toggle::before, /* Função do menu depois */
 .menu-toggle::after,
 .menu-toggle span {
     content: "";
-    position: relative; /*relative*/
+    position: relative; 
     left: 0;}
 
 .menu-toggle::before {
@@ -193,8 +199,7 @@ section {/*Seções*/
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: 56.25vw;
-    }
+    height: 56.25vw;}
 
 .video-preview iframe {
     width: 100%;
@@ -213,7 +218,7 @@ section {/*Seções*/
 .video-overlay:hover {
     background: rgba(0, 0, 0, 0.2);}
 
-.play-button { /*botão de play da faixa principal*/
+.play-button { /* Botão de play da faixa principal */
     width: 0;
     height: 0;
     border-left: 40px solid white;
@@ -223,22 +228,21 @@ section {/*Seções*/
     transition: 0.3s ease;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.5))}
 
-.video-modal { /*estado inicial do modal (escondido)*/
+.video-modal { /* Estado inicial do modal (escondido) */
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.75); /* escuro mas não totalmente */
-    backdrop-filter: blur(8px); /* efeito vidro */
+    background: rgba(0, 0, 0, 0.75); 
+    backdrop-filter: blur(8px); 
     -webkit-backdrop-filter: blur(8px);
     width: 100%;
     height: 100%;
     z-index: 9999;
-    display: none; /* Escondido por padrão */
+    display: none;
     align-items: center;
     justify-content: center;}
 
-/* Quando o JS entra em ação */
-.video-modal.active {
+.video-modal.active { /* Quando o JS entra em ação */
     display: flex;}
 
 .video-modal iframe {
@@ -247,9 +251,7 @@ section {/*Seções*/
     border-radius: 12px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.8);}
 
-
-    
-.video-close {
+.video-close { /* Botão para fechar o vídeo aberto */
     position: absolute;
     top: 30px;
     right: 40px;
@@ -259,51 +261,36 @@ section {/*Seções*/
     border: none;
     cursor: pointer;
     opacity: 0.6;
-    transition: opacity 0.4s ease;
-}
+    transform: rotate(0deg) scale(1);
+    transition: 
+        opacity 0.4s ease,
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);}
 
 .video-close::before,
-.video-close::after {
+.video-close::after { /* Linhas do X */
     content: "";
     position: absolute;
     top: 50%;
     left: 50%;
     width: 32px;
     height: 2px;
-    background: white;
+    background: var(--cor-branco);
     transform-origin: center;
-    transition: 0.4s ease;
-}
+    transition: 
+        height 0.4s ease,
+        background 0.4s ease;}
 
 .video-close::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-}
+    transform: translate(-50%, -50%) rotate(45deg);}
 
 .video-close::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
+    transform: translate(-50%, -50%) rotate(-45deg);}
 
 .video-close:hover {
     opacity: 1;
-}
+    transform: rotate(90deg) scale(1.12);}
 
 .video-close:hover::before,
 .video-close:hover::after {
-    height: 3px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    height: 3px;}
+/*=========================================================*/

@@ -102,13 +102,14 @@
 
             <!-- Modal do vídeo -->
             <div class="video-modal">
-
                 <button class="video-close"></button>
-
-                <iframe src="https://www.youtube.com/embed/bfv-VaaAlxc?autoplay=1" title="Hunter x Hunter Trailer"
-                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                <iframe
+                    id="youtubePlayer"
+                    src="https://www.youtube.com/embed/bfv-VaaAlxc?enablejsapi=1&autoplay=1&origin=http://127.0.0.1:5500&playsinline=1"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
                 </iframe>
-
             </div>
 
         </section>
@@ -138,6 +139,8 @@
             </p>
         </footer>
     </main>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- ===== JavaScript do Menu Lateral ===== -->
     <script src="scripts/menu_lateral.js"></script>
