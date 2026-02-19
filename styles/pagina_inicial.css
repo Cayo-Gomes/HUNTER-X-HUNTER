@@ -178,6 +178,129 @@ section {/*Seções*/
 
 
 
+/* ==================== FAIXA DE VÍDEO =================== */
+.video-section {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    background: var(--cor-preto);
+    cursor: pointer;}
+
+.video-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 56.25vw;
+    }
+
+.video-preview iframe {
+    width: 100%;
+    height: 100%;}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;}
+
+.video-overlay:hover {
+    background: rgba(0, 0, 0, 0.2);}
+
+.play-button { /*botão de play da faixa principal*/
+    width: 0;
+    height: 0;
+    border-left: 40px solid white;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.5))}
+
+.video-modal { /*estado inicial do modal (escondido)*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75); /* escuro mas não totalmente */
+    backdrop-filter: blur(8px); /* efeito vidro */
+    -webkit-backdrop-filter: blur(8px);
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none; /* Escondido por padrão */
+    align-items: center;
+    justify-content: center;}
+
+/* Quando o JS entra em ação */
+.video-modal.active {
+    display: flex;}
+
+.video-modal iframe {
+    width: 90%;
+    height: 80%;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.8);}
+
+
+    
+.video-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.4s ease;
+}
+
+.video-close::before,
+.video-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 2px;
+    background: white;
+    transform-origin: center;
+    transition: 0.4s ease;
+}
+
+.video-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.video-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.video-close:hover {
+    opacity: 1;
+}
+
+.video-close:hover::before,
+.video-close:hover::after {
+    height: 3px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
