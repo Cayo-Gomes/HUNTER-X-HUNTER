@@ -73,11 +73,11 @@
             
                 <!-- Logo Hunter x Hunter/frase -->
                     <div class="logo-text">
-                        <img src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
-                        
-                        <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a
-                                href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
-                        </p>
+                            <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
+                            
+                            <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a
+                                    href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
+                            </p>
                     </div>
             </div>
         </section>
@@ -93,23 +93,27 @@
                     <div class="play-button"></div>
                 </div>
 
-                <iframe
-                    src="https://www.youtube.com/embed/bfv-VaaAlxc?mute=1&autoplay=1&controls=0&loop=1&playlist=bfv-VaaAlxc"
-                    title="Hunter x Hunter Trailer" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                </iframe>
+                <video
+                    class="hero-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline>
+                    <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
+                </video>
 
             </div>
 
             <!-- Modal do vídeo -->
             <div class="video-modal">
                 <button class="video-close"></button>
-                <iframe
-                    id="youtubePlayer"
-                    src="https://www.youtube.com/embed/bfv-VaaAlxc?enablejsapi=1&autoplay=1&origin=http://127.0.0.1:5500&playsinline=1"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen>
-                </iframe>
+
+                <video
+                    class="modal-video"
+                    controls
+                    playsinline>
+                    <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
+                </video>
             </div>
 
         </section>
@@ -139,8 +143,6 @@
             </p>
         </footer>
     </main>
-
-    <script src="https://www.youtube.com/iframe_api"></script>
 
     <!-- ===== JavaScript do Menu Lateral ===== -->
     <script src="scripts/menu_lateral.js"></script>
