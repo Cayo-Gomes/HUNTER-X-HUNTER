@@ -24,24 +24,25 @@
 
 <body id="top">
 
+    <input type="checkbox" id="myInput">
+  <label for="myInput">
+      <span class="bar top"></span>
+      <span class="bar middle"></span>
+      <span class="bar bottom"></span>
+  </label>
+
     <!-- ================== Menu Lateral Fixo ================== -->
-    <aside class="sidebar">
+    <aside>
 
-        <!-- Botão hamburguer -->
-        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"></button>
+        <!-- Botão -->
+        <div class="aside-section aside-left">
+            <div>
+                <button class="button"></button>
+            </div>
+        </div>
 
-    </aside>
-
-
-    <!--  Overlay do menu  -->
-    <div class="menu-overlay">
-
-        <button class="menu-close" aria-label="Fechar menu">
-            X
-        </button>
-
-        <nav class="menu-content">
-            <ul>
+        <div class="aside-section aside-right">
+            <ul class="aside-list"> 
                 <li><a href="#">Introdução</a></li>
                 <li><a href="#">História</a></li>
                 <li><a href="#">Personagens</a></li>
@@ -54,10 +55,8 @@
             <div class="menu-background-image">
                 <img src="assets/images/gon_menu.png" alt="Gon Freecss em fundo do menu">
             </div>
-        </nav>
-    </div>
-
-
+        </div>
+    </aside>
 
     <!-- ================= Conteúdo Principal ================== -->
     <main class="main-content">
@@ -100,17 +99,13 @@
                 </div>
 
                 <video
-                    class="hero-video"
-                    autoplay
-                    muted
-                    loop
-                    playsinline>
+                    class="hero-video" autoplay muted loop playsinline>
                     <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
                 </video>
 
             </div>
 
-            <!-- Modal do vídeo -->
+            <!-- Modal (ou janela modal) do vídeo -->
             <div class="video-modal">
                 <button class="video-close"></button>
 
