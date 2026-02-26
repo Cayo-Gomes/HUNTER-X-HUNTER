@@ -26,7 +26,9 @@
 
    --sombra-leve: 0 4px 12px rgba(0,0,0,0.8);
 
-   --fonte-principal: 'Inter', sans-serif;}
+   --fonte-principal: 'Inter', sans-serif;
+   --fonte-secundaria: 'Alfa', serif;}
+
 /*=========================================================*/
 
 
@@ -67,8 +69,7 @@ section {/* Seções */
 
 body.modal-open {
     overflow: hidden;
-    height: 100vh;
-}
+    height: 100vh;}
 
 /*=========================================================*/
 
@@ -323,3 +324,13 @@ body.modal-open {
     border-radius: 20px;
     height: 900px;}
 /*=========================================================*/
+
+
+
+/* ====================== INTRODUÇÃO ===================== */
+.introduction-title {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-cinza-escuro);
+    font-size: 50px;
+
+}
