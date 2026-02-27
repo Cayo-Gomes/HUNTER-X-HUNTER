@@ -28,6 +28,8 @@
 
    --fonte-principal: 'Inter', sans-serif;
    --fonte-secundaria: 'Alfa', serif;
+   --fonte-terciaria:'Playfair Display', serif;
+
    --manga1: 'Mangat', sans-serif;
    --manga2: 'Mangatb', sans-serif;
    --manga3: 'Mangati', sans-serif;}
@@ -95,6 +97,7 @@ body.modal-open {
     align-items: center;}
 
 .hero-image img {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     margin-bottom: 60px;
     margin-left: 150px;
     width: 60%;
@@ -126,8 +129,7 @@ body.modal-open {
     top: 100px;
     right: 20px;
     display: flex;
-    gap: 10px;
-    z-index: 10;}
+    gap: 10px;}
 
 .language-switch button {
     padding: 6px 14px;
@@ -156,9 +158,178 @@ body.modal-open {
 
 
 
-/* ==================== Menu Lateral ===================== */
+/* ==================== MENU LATERAL ===================== */
 
-/*=========================================================*/
+/* Linha vertical fixa */
+body::before { 
+    content: "";
+    position: fixed;
+    left: 80px;
+    top: 0;
+    width: 2px;
+    height: 100vh;
+    background: var(--cor-preto);
+    z-index: 6;
+    transition: 0.4s ease;}
+
+/* Checkbox invisível */    
+#menu-toggle { 
+    display: none;}
+
+/* Botão hamburguer */
+.menu-button { 
+    position: fixed;
+    top: 30px;
+    left: 15px;
+    z-index: 5;
+    cursor: pointer;
+    transition: 0.3s ease;}
+    
+.menu-button:hover .top {
+    transform: translateX(3px);}
+
+.menu-button:hover .middle {
+    transform: translateX(-3px);}
+
+.menu-button:hover .bottom {
+    transform: translateX(3px);}
+
+.bar {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--cor-preto);
+    margin: 6px 0;
+    transition: 0.4s ease;}
+
+/* Menu fechado */
+aside { 
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 4;}
+
+/* Parte principal (menu que desliza) */
+.aside-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--cor-branco);
+    position: relative;
+    background-size: 6px 6px;
+    transform: translateX(100%);
+    transition: transform 0.6s ease;}
+
+/* Quando abrir */
+#menu-toggle:checked ~ aside {
+    pointer-events: auto;}
+
+#menu-toggle:checked ~ aside .aside-right {
+    transform: translateX(0);}
+
+/* Lista */
+.aside-list {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 50px ;
+    list-style: none;}
+
+.aside-list li {
+    position: relative;}
+
+.aside-list li::before {
+    content: attr(data-number);
+    position: absolute;
+    left: -60px;
+    font-size: 90px;
+    opacity: 0.10;
+    font-weight: 600;}
+
+#menu-toggle:checked ~ aside .aside-list li {
+    opacity: 1;
+    transform: translateY(0);}
+
+.aside-list a {
+    text-decoration: none;
+    font-family: var(--fonte-terciaria);
+    font-size: 55px;
+    color: var(--cor-preto);
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    position: relative;}
+
+.aside-list a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--cor-preto);
+    transition: 0.4s ease;}
+
+.aside-list a:hover::after {
+    width: 100%;}
+
+.aside-list a:hover {
+    letter-spacing: 2px;
+    opacity: 0.6;}
+
+/* imagem do Gon */
+.menu-background-image {
+    filter: grayscale(20%);
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    height: 70%;
+    pointer-events: none;
+    z-index: 1;}
+
+.menu-background-image img {
+    height: 100%;
+    opacity: 0.35;
+    transition: 0.6s ease;}
+
+#menu-toggle:checked ~ aside .menu-background-image img {
+    transform: translateX(-60px);}
+
+#menu-toggle:checked ~ aside {
+    pointer-events: auto;}
+
+/* trava scroll */
+#menu-toggle:checked ~ aside,
+#menu-toggle:checked ~ aside ~ * {
+    overflow: hidden;}
+
+/* Animação do X */
+#menu-toggle:checked + .menu-button .top { 
+    transform: rotate(45deg) translate(5px, 5px);}
+
+#menu-toggle:checked + .menu-button .middle {
+    opacity: 0;}
+
+#menu-toggle:checked + .menu-button .bottom {
+    transform: rotate(-45deg) translate(7px, -6px);}
+
+/* delay em cascata */
+#menu-toggle:checked ~ aside .aside-list li:nth-child(1) { transition-delay: 0.1s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(2) { transition-delay: 0.2s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(3) { transition-delay: 0.3s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(4) { transition-delay: 0.4s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(5) { transition-delay: 0.5s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(6) { transition-delay: 0.6s; }
+
+/* ===================================================== */
 
 
 
@@ -216,7 +387,8 @@ body.modal-open {
 .video-overlay:hover {
     background: rgba(0, 0, 0, 0.4);}
 
-.play-button { /* Botão de play da faixa principal */
+/* Botão de play da faixa principal */
+.play-button { 
     width: 0;
     height: 0;
     border-left: 40px solid white;
@@ -226,7 +398,8 @@ body.modal-open {
     transition: 0.3s ease;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.5))}
 
-.video-modal { /* Estado inicial do modal (escondido) */
+/* Estado inicial do modal (escondido) */
+.video-modal { 
     position: fixed;
     top: 0;
     left: 0;
@@ -240,7 +413,8 @@ body.modal-open {
     align-items: center;
     justify-content: center;}
 
-.video-modal.active { /* Quando o JS entra em ação */
+/* Quando o JS entra em ação */
+.video-modal.active { 
     display: flex;}
 
 .video-modal iframe {
@@ -249,7 +423,8 @@ body.modal-open {
     border-radius: 12px;
     box-shadow: 0 30px 80px rgba(0,0,0,0.8);}
 
-.video-close { /* Botão para fechar o vídeo aberto */
+/* Botão para fechar o vídeo aberto */
+.video-close { 
     margin-right: 15px;
     position: absolute;
     top: 30px;

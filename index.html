@@ -16,6 +16,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- TÍTULO DA PÁGINA -->
     <title>Projeto Hunter x Hunter</title>
@@ -23,39 +24,42 @@
 </head>
 
 <body id="top">
-
-    <input type="checkbox" id="myInput">
-  <label for="myInput">
-      <span class="bar top"></span>
-      <span class="bar middle"></span>
-      <span class="bar bottom"></span>
-  </label>
-
     <!-- ================== Menu Lateral Fixo ================== -->
+    <!-- Checkbox que controla o menu -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Botão hamburger -->
+    <label for="menu-toggle" class="menu-button">
+        <span class="bar top"></span>
+        <span class="bar middle"></span>
+        <span class="bar bottom"></span>
+
+        <div class="side-line"></div>
+    </label>
+
     <aside>
 
-        <!-- Botão -->
         <div class="aside-section aside-left">
-            <div>
-                <button class="button"></button>
-            </div>
+            <!-- Pode deixar vazio se quiser -->
         </div>
 
         <div class="aside-section aside-right">
+
             <ul class="aside-list"> 
-                <li><a href="#">Introdução</a></li>
-                <li><a href="#">História</a></li>
-                <li><a href="#">Personagens</a></li>
-                <li><a href="#">Sistema de Poder</a></li>
-                <li><a href="#">Trilha Sonora</a></li>
-                <li><a href="#">Autor</a></li>
+                <li data-number="01"><a href="#">Introdução</a></li>
+                <li data-number="02"><a href="#">História</a></li>
+                <li data-number="03"><a href="#">Personagens</a></li>
+                <li data-number="04"><a href="#">Trilha Sonora</a></li>
+                <li data-number="05"><a href="#">Autor</a></li>
+                <li data-number="06"><a href="#">Sistema de Poder</a></li>
             </ul>
 
-            <!-- imagem do Gon transparente -->
             <div class="menu-background-image">
-                <img src="assets/images/gon_menu.png" alt="Gon Freecss em fundo do menu">
+                <img src="assets/images/gon_menu.png" alt="Gon Freecss">
             </div>
+
         </div>
+
     </aside>
 
     <!-- ================= Conteúdo Principal ================== -->
