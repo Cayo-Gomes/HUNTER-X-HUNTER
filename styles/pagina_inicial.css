@@ -6,14 +6,8 @@
     font-style: normal;}
 
 @font-face {
-    font-family: 'Mangatb';
-    src: url('../assets/fonts/mangatb.ttf') format('truetype');
-    font-weight: 100;
-    font-style: normal;}
-
-@font-face {
-    font-family: 'Mangati';
-    src: url('../assets/fonts/mangati.ttf') format('truetype');
+    font-family: 'Hoshiko Satsuki';
+    src: url('../assets/fonts/Hoshiko\ Satsuki.ttf');
     font-weight: 100;
     font-style: normal;}
 
@@ -26,13 +20,12 @@
 
    --sombra-leve: 0 4px 12px rgba(0,0,0,0.8);
 
+    /* Fontes */
    --fonte-principal: 'Inter', sans-serif;
    --fonte-secundaria: 'Alfa', serif;
    --fonte-terciaria:'Playfair Display', serif;
-
    --manga1: 'Mangat', sans-serif;
-   --manga2: 'Mangatb', sans-serif;
-   --manga3: 'Mangati', sans-serif;}
+   --manga2: 'Hoshiko Satsuki', sans-serif;}
    
 
 /*=========================================================*/
@@ -51,7 +44,7 @@ body { /* Body */
     color: var(--cor-preto);
     overflow-x: hidden;}
 
-a{ /* Link s*/
+a{ /* Links */
     text-decoration: none!important;
     color: inherit;}
 
@@ -80,14 +73,34 @@ body.modal-open {
 /*=========================================================*/
 
 
-/* ======================== Hero ========================= */
+
+/* ================ FAIXA DIAGONAL NO FUNDO ============== */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent 45%,
+        var(--cor-cinza) 45%,
+        var(--cor-cinza) 75%,
+        transparent 75%);
+    z-index: -1;
+    pointer-events: none;}
+/*=========================================================*/
+
+
+
+/* ======================== HERO ========================= */
 .hero {
     width: 100%;
     min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 80px 5%;
     gap: 40px;}
 
 /* Imagem */
@@ -126,7 +139,7 @@ body.modal-open {
 
 .language-switch {
     position: absolute;
-    top: 100px;
+    top: 20px;
     right: 20px;
     display: flex;
     gap: 10px;}
@@ -142,9 +155,10 @@ body.modal-open {
     color: var(--cor-branco);}
 
 .hero-info p {
+    opacity: 0.7;
     font-size: 18px;
     line-height: 1.6;
-    color: var(--cor-cinza-escuro);}
+    color: var(--cor-preto);}
 
 .hero-info a {
     font-family: var(--manga1);
@@ -153,17 +167,17 @@ body.modal-open {
     border-bottom: 1px solid currentColor;}
 
 .hero-info a:hover {
-    color: #757575;}
+    color: var(--cor-destaque)}
 /*=========================================================*/
 
 
 
 /* ==================== MENU LATERAL ===================== */
-
 /* Linha vertical fixa */
 body::before { 
     content: "";
     position: fixed;
+    left: var(--sidebar-width);
     left: 80px;
     top: 0;
     width: 2px;
@@ -220,10 +234,22 @@ aside {
     width: 100%;
     height: 100%;
     background-color: var(--cor-branco);
+    background-image: radial-gradient(var(--cor-cinza) 1px, transparent 1px);
     position: relative;
-    background-size: 6px 6px;
+    background-size: 20px 20px;
     transform: translateX(100%);
-    transition: transform 0.6s ease;}
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1)}
+
+.aside-right::after {
+    content: "ハンター";
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 250px;
+    font-family: var(--manga2);
+    color: rgba(0, 0, 0, 0.05); 
+    z-index: 0;
+    pointer-events: none;}
 
 /* Quando abrir */
 #menu-toggle:checked ~ aside {
@@ -251,7 +277,7 @@ aside {
     position: absolute;
     left: -60px;
     font-size: 90px;
-    opacity: 0.10;
+    opacity: 0.2;
     font-weight: 600;}
 
 #menu-toggle:checked ~ aside .aside-list li {
@@ -335,7 +361,10 @@ aside {
 
 /* ==================== FAIXA DE VÍDEO =================== */
 .video-section {
-    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    width: calc(100vw - 80px);
+    margin-top: 80px;
+    margin-left: 80px;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -475,4 +504,68 @@ aside {
 .modal-video {
     border-radius: 20px;
     height: 900px;}
+/*=========================================================*/
+
+
+
+/* ====================== INTRODUÇÃO ===================== */
+.introduction-section {
+   padding: 100px 10% 100px calc(80px + 10%); 
+   display: flex;
+   flex-direction: column;
+   gap: 30px;}
+
+/* Título */
+.introduction-title {
+    color: var(--cor-preto);
+    font-family: var(--manga2);
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    position: relative;}
+
+/* Linha decorativa abaixo do título */
+.introduction-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: var(--cor-destaque);
+    margin-top: 15px;}
+
+/* Texto da introdução */
+.introduction-text {
+    font-size: 24px;
+    max-width: 800px;
+    line-height: 1.6;
+    color: var(--cor-preto);
+    opacity: 0.7;
+    font-family: var(--fonte-principal);
+    text-align: justify;}
+
+.hunter {
+    color: var(--cor-destaque);
+    font-weight: bold;}
+/*=========================================================*/
+
+
+
+/* ======================= RODAPÉ ======================== */
+.credits {
+    width: calc(100vw - 80px);
+    margin-left: 80px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--cor-branco);
+    padding: 30px 20px;
+    text-align: center;}
+
+.credits p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2;}
+
+.link-rodape {
+    color: var();
+    font-weight: bold;
+    transition: 0.3s;}
 /*=========================================================*/
