@@ -263,4 +263,24 @@ p {
     width: 60%;
   }
 }
-0
+
+
+/* ================ FAIXA DIAGONAL NO FUNDO ============== */
+body::after {
+    content: "";
+    position: fixed; /* Fica fixo enquanto você rola a página */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* O ângulo de 110deg dá essa inclinação de 'corte' */
+    background: linear-gradient(
+        110deg, 
+        transparent 45%, 
+        var(--cor-cinza) 45%, 
+        var(--cor-cinza) 75%, 
+        transparent 75%
+    );
+    z-index: -1; /* Fica atrás de todo o conteúdo */
+    pointer-events: none; /* Garante que você consiga clicar nos botões por cima */
+}
