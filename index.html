@@ -24,6 +24,14 @@
 </head>
 
 <body id="top">
+    <!-- ==================== Intro Animada ==================== -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <img src="assets/images/hunter-x-hunter-logo.png" class="logo-intro hxh-logo" alt="Logo Hunter x Hunter">
+            <img src="assets/icons/hxh-512x512.png" class="logo-intro hunter-logo" alt="Logo Caçadores">
+        </div>
+    </div>
+
     <!-- ================== Menu Lateral Fixo ================== -->
     <!-- Checkbox que controla o menu -->
     <input type="checkbox" id="menu-toggle">
@@ -65,7 +73,7 @@
     <!-- ================= Conteúdo Principal ================== -->
     <main class="main-content">
 
-        <section class="hero">
+        <section class="hero reveal">
 
             <!-- Idioma -->
                 <div class="language-switch">
@@ -75,14 +83,14 @@
 
             <!-- Imagem Principal -->
             <div class="hero-image">
-                <img src="assets/images/imagem_principal.jpg" alt="imagem_princial">
+                <img src="assets/images/imagem_principal.jpg" alt="imagem_principal">
             </div>
 
             <div class="hero-info">
             
                 <!-- Logo Hunter x Hunter/frase -->
                     <div class="logo-text">
-                            <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo">
+                            <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo-PeB">
                             
                             <p>Entre luz e sombra, eu avanço. <br>Inspirado por <a
                                     href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
@@ -93,39 +101,34 @@
 
 
         <!-- === Faixa de Vídeo === -->
-        <section class="video-section" id="videoSection">
+        <section class="video-section reveal" id="videoSection">
 
-            <!-- Preview do vídeo -->
             <div class="video-preview">
-
                 <div class="video-overlay">
                     <div class="play-button"></div>
                 </div>
 
-                <video
-                    class="hero-video" autoplay muted loop playsinline>
-                    <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
-                </video>
-
-            </div>
-
-            <!-- Modal (ou janela modal) do vídeo -->
-            <div class="video-modal">
-                <button class="video-close"></button>
-
-                <video
-                    class="modal-video"
-                    controls
-                    playsinline>
+                <video class="hero-video" autoplay muted loop playsinline>
                     <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
                 </video>
             </div>
 
         </section>
 
+        <!-- MODAL FORA DA SECTION -->
+        <div class="video-modal">
+            <button class="video-close"></button>
+
+            <video
+                class="modal-video"
+                controls
+                playsinline>
+                <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <!-- ============= Introdução ============== -->
-        <section class="introduction-section" id="introduction">
+        <section class="introduction-section reveal" id="introduction">
             <h2 class="introduction-title">Introdução</h2>
             <p class="introduction-text">
                 Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas
@@ -135,7 +138,7 @@
         </section>
 
         <!--  Créditos  -->
-        <footer class="credits">
+        <footer class="credits reveal">
             <p>
                 Projeto conceitual desenvolvido por <a class="link-rodape" href="https://github.com/Cayo13y" target="_blank">Cayo
                     B.Gomes</a>.<br>
@@ -143,14 +146,21 @@
             </p>
         </footer>
     </main>
-    
+
     <!-- ======== JavaScript Principal ======== -->
     <script src="scripts/pagina_inicial.js"></script>
     
+    <!-- === JavaScript da tela de abertura === -->
+    <script src="scripts/tela_abertura.js"></script>
+
     <!-- ===== JavaScript do Menu Lateral ===== -->
     <script src="scripts/menu_lateral.js"></script>
 
     <!-- ==== JavaScript da Faixa de Vídeo ====== -->
     <script src="scripts/faixa_video.js"></script>
+
+    <!-- JavaScript da Animação -->
+    <script src="scripts/animacao.js"></script>
+
 </body>
 </html>
