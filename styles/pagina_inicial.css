@@ -663,3 +663,170 @@ aside {
     font-weight: bold;
     transition: 0.3s;}
 /*=========================================================*/
+
+@media (max-width: 1024px) {
+
+    /* HERO */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-image img {
+        margin: 0 auto 40px auto;
+        width: 70%;
+    }
+
+    .hero-info {
+        margin-top: 0;
+        align-self: center;
+    }
+
+    /* MENU LISTA */
+    .aside-list {
+        grid-template-columns: repeat(2, auto);
+        gap: 40px;
+    }
+
+    .aside-list a {
+        font-size: 40px;
+    }
+
+    .aside-list li::before {
+        font-size: 60px;
+        left: -40px;
+    }
+
+    /* VIDEO */
+    .video-section {
+        width: 100%;
+        margin-left: 0;
+        height: 350px;
+    }
+
+    /* INTRODUÇÃO */
+    .introduction-section {
+        padding: 80px 8%;
+    }
+
+    .introduction-title {
+        font-size: 45px;
+    }
+
+    .introduction-text {
+        font-size: 20px;
+    }
+
+    /* RODAPÉ */
+    .credits {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body::before {
+        display: none; /* remove linha lateral */
+    }
+
+    /* HERO */
+    .hero {
+        min-height: auto;
+        padding: 60px 20px;
+        gap: 20px;
+    }
+
+    .hero-image img {
+        width: 85%;
+        margin: 0 auto 30px auto;
+    }
+
+    .logo-HxH {
+        max-width: 320px;
+    }
+
+    .hero-info p {
+        font-size: 16px;
+    }
+
+    /* MENU */
+    .aside-list {
+        grid-template-columns: 1fr;
+        left: 10%;
+        gap: 30px;
+    }
+
+    .aside-list a {
+        font-size: 32px;
+    }
+
+    .aside-list li::before {
+        font-size: 50px;
+        left: -35px;
+    }
+
+    .menu-background-image {
+        display: none; /* tira o Gon do fundo no mobile */
+    }
+
+    /* VIDEO */
+    .video-section {
+        height: 250px;
+    }
+
+    .modal-video {
+        width: 95vw;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .video-close {
+        right: 20px;
+        top: 20px;
+    }
+
+    /* INTRODUÇÃO */
+    .introduction-section {
+        padding: 60px 20px;
+    }
+
+    .introduction-title {
+        font-size: 34px;
+    }
+
+    .introduction-text {
+        font-size: 16px;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .logo-HxH {
+        max-width: 250px;
+    }
+
+    .aside-list a {
+        font-size: 26px;
+    }
+
+    .introduction-title {
+        font-size: 26px;
+    }
+
+    .introduction-text {
+        font-size: 14px;
+    }
+
+    .play-button {
+        border-left: 25px solid white;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+    }
+
+}
+
