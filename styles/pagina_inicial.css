@@ -233,7 +233,7 @@ body::after {
     padding: 6px 14px;
     border: 2px solid var(--cor-preto);
     font-size: 13px;
-    transition: 0.3s;}
+    transition: 0.5s;}
 
 .language-switch button:hover {
     background-color: var(--cor-preto);
@@ -245,12 +245,38 @@ body::after {
     line-height: 1.6;
     color: var(--cor-preto);}
 
-.hero-info a {
+
+.togashi-link {
     font-family: var(--manga1);
-    transition: 0.3s;
     font-weight: 600;
-    transition: 0.3;
-    border-bottom: 1px solid currentColor;}
+    background-image: linear-gradient(
+        to right,
+        var(--cor-destaque),
+        var(--cor-destaque) 50%,
+        var(--cor-preto) 50% );
+    background-size: 200% 100%; 
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;}
+
+.togashi-link::after { /* Efeito linha deslizante */
+    content: ""; /* Obrigatório pro before funcionar */
+    background: var(--cor-destaque);
+    display: block;
+    left: 0;
+    width: 0; /* a linha começa com largura zero, ou seja invisível */
+    height: 3px;
+    transition: all 0.4s ease-in-out;}
+
+.togashi-link:hover {
+ background-position: 0;}
+
+.togashi-link:hover::after{
+  width: 100%;}
 /*=========================================================*/
 
 
@@ -663,3 +689,4 @@ aside {
     font-weight: bold;
     transition: 0.3s;}
 /*=========================================================*/
+

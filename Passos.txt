@@ -7,3 +7,32 @@
 7. Footer / créditos (já feito ✅)
 8. Responsivo
 9. Animação Introdutória antes de entrar no site
+
+
+
+OBS: Anotações de como funcinam algumas partes do código (Hovers, animações, fundos e etc...)
+----------------------------------------------------------------------------------------------
+1° Hover do togashi-link na seção hero:
+
+-linear-gradient(to right, ...): Cria um gradiente 
+linear da esquerda → para a direita.
+
+-background-size 200% 100%: O 200% é a largura do fundo que vai ficar com o dobro do elemento,
+e os 100% é a altura do fundo que vai ocupar exatamente 100% da altura do elemento, ou seja
+está criando um fundo que é 2x mais largo que o elemento, mas tem a mesma altura. Isso é
+muito usado em efeitos de hover animado, gradientes que "deslizam" e etc...
+
+-background-position -100%: Isso define onde o fundo começa dentro do elemento. -100%
+desloca o fundo totalmente para esquerda. Como o fundo tem 200% de largura, quando 
+coloca -100%, ai mostra a segunda metade do fundo.
+
+Muito usado em:
+    Botões com efeito de luz
+    Texto com gradiente animado
+    Efeito de scan (muito estiloso pra site de mangá 👀)
+
+OBS: Porque pseudo-elementos (::before e ::after) são inline por padrão.
+Ou seja, eles se comportam como texto.
+
+Colocando display block, ele respeita as regras da caixa
+----------------------------------------------------------------------------------------------
