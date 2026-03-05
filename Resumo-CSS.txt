@@ -1,0 +1,177 @@
+📘 CSS — O MAPA MENTAL DEFINITIVO
+
+ESPECIFICIDADE (QUEM MANDA EM QUEM)
+inline style > id > classe > elemento
+
+---------------------------------------------------------
+1️⃣ O CSS NÃO É ALEATÓRIO
+
+CSS funciona baseado em 5 pilares:
+
+1. Fluxo normal
+2. Box model
+3. Display
+4. Position
+5. Especifidade
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+2️⃣ FLUXO NORMAL
+
+Por padrão, todo elemento segue o fluxo do documento.
+Ele é organizado de cima para baixo.
+
+Existem dois comportamentos principais:
+__________________________________
+🧍 Inline
+Exemplos: span a, strong, img
+
+- Vive como texto
+- Não respeita Width
+- Não respeita hight
+- Não quebra linha
+- Ocupa só o espaço do conteúdo
+__________________________________
+
+__________________________________
+📦 Block
+Exemplos: div, section, padrão
+
+- Quebra linha antes e depois
+- Ocupa 100% da largura do pai
+- Respeita width e height
+__________________________________
+
+__________________________________
+🧩 Inline-block
+
+- Fica na mesma linha
+- Respeita width e height
+- Híbrido
+__________________________________
+
+💡 Regra de ouro:
+Se width/height não funciona, é inline.
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+
+3️⃣ BOX MODEL (A CAIXA INVISÍVEL)
+
+Todo elemento é uma caixa.
+__________________________________
+Ele é composto por:
+Conteúdo, Padding, Border e Margin
+
+Ordem real:
+[ margin ]
+    [ border ]
+        [ padding ]
+            [ content ]
+__________________________________
+
+Content-box (padrão):
+Width não inclui padding nem border.
+
+Border-box (recomendado):
+Width inclui tudo
+
+Obs: sempre use *{box-sizing: border box;}
+Evita 50% dos bugs de layout
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+4️⃣ POSITION (SAIR OU NÃO DO FLUXO)
+
+Static (padrão):
+- Segue o fluxo normal.
+
+Relative:
+- Continua no fluxo, mas pode ser deslocado.
+- Cria referência para absolute.
+
+Absolute:
+- Sai do fluxo.
+- Se posiciona baseao no primeiro pai com
+position diferente de static.
+
+Fixed:
+- Fica preso na tela.
+
+Sticky:
+- Mistura de relative + fixed.
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+
+5️⃣ Z-INDEX (CAMADAS)
+
+Só funciona em elementos posicionados.
+
+Quanto maior o número, mais na frente.
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+
+6️⃣ PSEUDO-ELEMENTOS
+
+Before e After são elementos falsos, precisam
+de content para funcionar.
+
+Se quiser que obedeçam largura/altura, use
+display: block.
+
+Eles vivem dentro da caixa do elemento.
+Ordem estrural:
+- Before
+- Conteúdo real
+- After
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+
+7️⃣ TRANSITION (ANIMAÇÃO SUAVE)
+
+Transition não cria animação.
+Ela suaviza a mudança entre:
+
+Estado inicial → Estado final
+Se não tiver diferença entre estados, não anima.
+---------------------------------------------------------
+
+
+---------------------------------------------------------
+8️⃣ OVERFLOW 
+
+A propriedade CSS overflow controla como o conteúdo 
+que excede as dimensões (largura ou altura) 
+de um elemento é exibido.
+
+Principais Valores:
+
+- Visible (padrão): O conteúdo transborda e fica 
+visível fora fa caixa do elemento.
+
+- Hidden: O conteúdo que excede o limite é ocultado.
+
+- Scroll: Adiciona barras de rolagem para que o usuário
+possa rolar e ver o restante do conteúdo, mesmo que não 
+seja necessário.
+
+- Auto: Semelhante ao scroll, mas as barras de rolagem 
+só aparecem se o conteúdo realmente ultrapassar o limite.
+
+- Clip: O conteúdo é cortado nos limites do elemento, 
+similar ao hidden.
+
+Propriedades Relacionadas:
+overflow-x: Controla apenas o transbordamento horizontal.
+overflow-y: Controla apenas o transbordamento vertical.
+---------------------------------------------------------
+
