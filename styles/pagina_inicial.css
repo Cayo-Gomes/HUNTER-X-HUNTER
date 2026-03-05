@@ -26,8 +26,6 @@
    --fonte-terciaria:'Playfair Display', serif;
    --manga1: 'Mangat', sans-serif;
    --manga2: 'Hoshiko Satsuki', sans-serif;}
-   
-
 /*=========================================================*/
 
 
@@ -269,7 +267,6 @@ body::after {
     line-height: 1.6;
     color: var(--cor-preto);}
 
-
 .togashi-link {
     font-family: var(--manga1);
     font-weight: 600;
@@ -310,7 +307,6 @@ body::after {
 body::before { 
     content: "";
     position: fixed;
-    left: var(--sidebar-width);
     left: 80px;
     top: 0;
     width: 2px;
@@ -322,7 +318,7 @@ body::before {
 /* Checkbox invisível */    
 #menu-toggle { 
     display: none;}
-
+    
 /* Botão hamburguer */
 .menu-button { 
     position: fixed;
