@@ -26,8 +26,6 @@
    --fonte-terciaria:'Playfair Display', serif;
    --manga1: 'Mangat', sans-serif;
    --manga2: 'Hoshiko Satsuki', sans-serif;}
-   
-
 /*=========================================================*/
 
 
@@ -78,14 +76,14 @@ body.modal-open {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; 
-    height: 100vh; 
-    background-color: #fff; 
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-branco);
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    z-index: 9999;
-    overflow: hidden;}
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;}
 
 .splash-content {
     position: relative;
@@ -152,9 +150,33 @@ body.modal-open {
         opacity 0.5s ease,
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);}
 
+/* Animação do X (Menu Hamburguer) */
+#menu-toggle:checked + .menu-button .top { 
+    transform: rotate(45deg) translate(5px, 5px);}
+
+#menu-toggle:checked + .menu-button .middle {
+    opacity: 0;}
+
+#menu-toggle:checked + .menu-button .bottom {
+    transform: rotate(-45deg) translate(7px, -6px);}
+
 #menu-toggle:checked ~ aside .aside-list li {
     opacity: 1;
     transform: translateX(0);}
+
+/* delay em cascata */
+#menu-toggle:checked ~ aside .aside-list li:nth-child(1) 
+{ transition-delay: 0.1s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(2) 
+{ transition-delay: 0.2s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(3) 
+{ transition-delay: 0.3s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(4) 
+{ transition-delay: 0.4s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(5) 
+{ transition-delay: 0.5s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(6) 
+{ transition-delay: 0.6s; }
 /*=========================================================*/
 
 
@@ -163,8 +185,8 @@ body.modal-open {
 body::after {
     content: "";
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -233,7 +255,7 @@ body::after {
     padding: 6px 14px;
     border: 2px solid var(--cor-preto);
     font-size: 13px;
-    transition: 0.3s;}
+    transition: 0.5s;}
 
 .language-switch button:hover {
     background-color: var(--cor-preto);
@@ -245,12 +267,37 @@ body::after {
     line-height: 1.6;
     color: var(--cor-preto);}
 
-.hero-info a {
+.togashi-link {
     font-family: var(--manga1);
-    transition: 0.3s;
     font-weight: 600;
-    transition: 0.3;
-    border-bottom: 1px solid currentColor;}
+    background-image: linear-gradient(
+        to right,
+        var(--cor-destaque),
+        var(--cor-destaque) 50%,
+        var(--cor-preto) 50% );
+    background-size: 200% 100%; 
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease-in-out;}
+
+.togashi-link::after { /* Efeito linha deslizante */
+    content: ""; /* Obrigatório pro before funcionar */
+    background: var(--cor-destaque);
+    display: block;
+    left: 0;
+    width: 0; /* a linha começa com largura zero, ou seja invisível */
+    height: 3px;
+    transition: all 0.4s ease-in-out;}
+
+.togashi-link:hover {
+ background-position: 0;}
+
+.togashi-link:hover::after{
+  width: 100%;}
 /*=========================================================*/
 
 
@@ -260,7 +307,6 @@ body::after {
 body::before { 
     content: "";
     position: fixed;
-    left: var(--sidebar-width);
     left: 80px;
     top: 0;
     width: 2px;
@@ -272,7 +318,7 @@ body::before {
 /* Checkbox invisível */    
 #menu-toggle { 
     display: none;}
-
+    
 /* Botão hamburguer */
 .menu-button { 
     position: fixed;
@@ -380,7 +426,7 @@ aside {
     content: "";
     position: absolute;
     bottom: -5px;
-    left: 0;
+    left: 0%;
     width: 0%;
     height: 2px;
     background: var(--cor-preto);
@@ -411,33 +457,6 @@ aside {
 
 #menu-toggle:checked ~ aside .menu-background-image img {
     transform: translateX(-60px);}
-
-#menu-toggle:checked ~ aside {
-    pointer-events: auto;}
-
-/* trava scroll */
-#menu-toggle:checked ~ aside,
-#menu-toggle:checked ~ aside ~ * {
-    overflow: hidden;}
-
-/* Animação do X */
-#menu-toggle:checked + .menu-button .top { 
-    transform: rotate(45deg) translate(5px, 5px);}
-
-#menu-toggle:checked + .menu-button .middle {
-    opacity: 0;}
-
-#menu-toggle:checked + .menu-button .bottom {
-    transform: rotate(-45deg) translate(7px, -6px);}
-
-/* delay em cascata */
-#menu-toggle:checked ~ aside .aside-list li:nth-child(1) { transition-delay: 0.1s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(2) { transition-delay: 0.2s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(3) { transition-delay: 0.3s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(4) { transition-delay: 0.4s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(5) { transition-delay: 0.5s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(6) { transition-delay: 0.6s; }
-
 /* ===================================================== */
 
 
@@ -663,3 +682,4 @@ aside {
     font-weight: bold;
     transition: 0.3s;}
 /*=========================================================*/
+
