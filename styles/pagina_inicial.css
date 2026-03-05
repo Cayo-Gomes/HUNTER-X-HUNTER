@@ -78,14 +78,14 @@ body.modal-open {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; 
-    height: 100vh; 
-    background-color: #fff; 
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor-branco);
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    z-index: 9999;
-    overflow: hidden;}
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;}
 
 .splash-content {
     position: relative;
@@ -152,9 +152,33 @@ body.modal-open {
         opacity 0.5s ease,
         transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);}
 
+/* Animação do X (Menu Hamburguer) */
+#menu-toggle:checked + .menu-button .top { 
+    transform: rotate(45deg) translate(5px, 5px);}
+
+#menu-toggle:checked + .menu-button .middle {
+    opacity: 0;}
+
+#menu-toggle:checked + .menu-button .bottom {
+    transform: rotate(-45deg) translate(7px, -6px);}
+
 #menu-toggle:checked ~ aside .aside-list li {
     opacity: 1;
     transform: translateX(0);}
+
+/* delay em cascata */
+#menu-toggle:checked ~ aside .aside-list li:nth-child(1) 
+{ transition-delay: 0.1s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(2) 
+{ transition-delay: 0.2s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(3) 
+{ transition-delay: 0.3s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(4) 
+{ transition-delay: 0.4s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(5) 
+{ transition-delay: 0.5s; }
+#menu-toggle:checked ~ aside .aside-list li:nth-child(6) 
+{ transition-delay: 0.6s; }
 /*=========================================================*/
 
 
@@ -163,8 +187,8 @@ body.modal-open {
 body::after {
     content: "";
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(
@@ -437,33 +461,6 @@ aside {
 
 #menu-toggle:checked ~ aside .menu-background-image img {
     transform: translateX(-60px);}
-
-#menu-toggle:checked ~ aside {
-    pointer-events: auto;}
-
-/* trava scroll */
-#menu-toggle:checked ~ aside,
-#menu-toggle:checked ~ aside ~ * {
-    overflow: hidden;}
-
-/* Animação do X */
-#menu-toggle:checked + .menu-button .top { 
-    transform: rotate(45deg) translate(5px, 5px);}
-
-#menu-toggle:checked + .menu-button .middle {
-    opacity: 0;}
-
-#menu-toggle:checked + .menu-button .bottom {
-    transform: rotate(-45deg) translate(7px, -6px);}
-
-/* delay em cascata */
-#menu-toggle:checked ~ aside .aside-list li:nth-child(1) { transition-delay: 0.1s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(2) { transition-delay: 0.2s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(3) { transition-delay: 0.3s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(4) { transition-delay: 0.4s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(5) { transition-delay: 0.5s; }
-#menu-toggle:checked ~ aside .aside-list li:nth-child(6) { transition-delay: 0.6s; }
-
 /* ===================================================== */
 
 
