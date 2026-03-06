@@ -255,7 +255,7 @@ body::after {
     padding: 6px 14px;
     border: 2px solid var(--cor-preto);
     font-size: 13px;
-    transition: 0.5s;}
+    transition: 0.7s;}
 
 .language-switch button:hover {
     background-color: var(--cor-preto);
@@ -285,11 +285,11 @@ body::after {
     transition: all 0.4s ease-in-out;}
 
 .togashi-link::after { /* Efeito linha deslizante */
-    content: ""; /* Obrigatório pro before funcionar */
+    content: ""; 
     background: var(--cor-destaque);
     display: block;
     left: 0;
-    width: 0; /* a linha começa com largura zero, ou seja invisível */
+    width: 0; 
     height: 3px;
     transition: all 0.4s ease-in-out;}
 
@@ -488,7 +488,7 @@ aside {
 .video-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -631,6 +631,7 @@ aside {
 /* Título */
 .introduction-title {
     color: var(--cor-preto);
+    text-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
     font-family: var(--manga2);
     font-size: 60px;
     text-transform: uppercase;
