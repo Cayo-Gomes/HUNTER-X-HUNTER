@@ -6,4 +6,4 @@ Esse projeto contará a trajetória do autor, seus principais projetos, além de
 e como ela funciona. 
 
 
-Link do site: https://cayo13y.github.io/HUNTER-X-HUNTER/
+Link: https://cayo13y.github.io/HUNTER-X-HUNTER/
