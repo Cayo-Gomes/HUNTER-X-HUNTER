@@ -8,23 +8,23 @@
     <!-- FAVICON DA PÁGINA -->
     <link rel="shortcut icon" href="assets/icons/hxh-touch-icon.png" type="image/x-icon">
 
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <!-- ARQUIVO CSS -->
     <link rel="stylesheet" href="styles/pagina_inicial.css">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- TÍTULO DA PÁGINA -->
     <title>Projeto Hunter x Hunter</title>
-
 </head>
 
 <body id="top">
+
     <!-- ==================== Intro Animada ==================== -->
     <div id="splash-screen">
         <div class="splash-content">
@@ -34,10 +34,8 @@
     </div>
 
     <!-- ================== Menu Lateral Fixo ================== -->
-    <!-- Checkbox que controla o menu -->
     <input type="checkbox" id="menu-toggle">
 
-    <!-- Botão hamburger -->
     <label for="menu-toggle" class="menu-button">
         <span class="bar top"></span>
         <span class="bar middle"></span>
@@ -46,14 +44,11 @@
     </label>
 
     <aside>
-        <div class="aside-section aside-left">
-            <!-- Pode deixar vazio se quiser -->
-        </div>
+        <div class="aside-section aside-left"></div>
 
         <div class="aside-section aside-right">
-
             <ul class="aside-list">
-                <li data-number="01"><a href="#">Introdução</a></li>
+                <li data-number="01"><a href="index.html">Introdução</a></li>
                 <li data-number="02"><a href="#">História</a></li>
                 <li data-number="03"><a href="#">Personagens</a></li>
                 <li data-number="04"><a href="#">Trilha Sonora</a></li>
@@ -70,32 +65,41 @@
     <!-- ================= Conteúdo Principal ================== -->
     <main class="main-content">
 
+        <!-- ======================== HERO ======================== -->
         <section class="hero reveal">
+
             <!-- Idioma -->
             <div class="language-switch">
                 <button>PT</button>
                 <button>EN</button>
             </div>
 
-            <!-- Imagem Principal -->
-            <div class="hero-image">
-                <img src="assets/images/imagem_principal.jpg" alt="imagem_principal">
-            </div>
+            <!-- Bootstrap Grid para o hero -->
+            <div class="container-fluid hero-container">
+                <div class="row align-items-center g-0">
 
-            <div class="hero-info">
+                    <!-- Imagem -->
+                    <div class="col-12 col-md-6 hero-image-col">
+                        <div class="hero-image">
+                            <img src="assets/images/imagem_principal.jpg" alt="imagem_principal">
+                        </div>
+                    </div>
 
-                <!-- Logo Hunter x Hunter/frase -->
-                <div class="logo-text">
-                    <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo-PeB">
+                    <!-- Texto -->
+                    <div class="col-12 col-md-6 hero-info-col">
+                        <div class="hero-info">
+                            <div class="logo-text">
+                                <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo-PeB">
+                                <p>Entre luz e sombra, eu avanço. <br>Inspirado por
+                                    <a class="togashi-link" href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <p>Entre luz e sombra, eu avanço. <br>Inspirado por
-                        <a class="togashi-link" href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi"
-                            target="_blank">Yoshihiro Togashi</a>.
-                    </p>
                 </div>
             </div>
         </section>
-
 
         <!-- === Faixa de Vídeo === -->
         <section class="video-section reveal" id="videoSection">
@@ -103,17 +107,15 @@
                 <div class="video-overlay">
                     <div class="play-button"></div>
                 </div>
-
                 <video class="hero-video" autoplay muted loop playsinline>
                     <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
                 </video>
             </div>
         </section>
 
-        <!-- MODAL FORA DA SECTION -->
+        <!-- MODAL DE VÍDEO -->
         <div class="video-modal">
             <button class="video-close"></button>
-
             <video class="modal-video" controls playsinline>
                 <source src="assets/videos/Hunter x Hunter Trailer.mp4" type="video/mp4">
             </video>
@@ -121,39 +123,42 @@
 
         <!-- ============= Introdução ============== -->
         <section class="introduction-section reveal" id="introduction">
-            <h2 class="introduction-title">Introdução</h2>
-            <p class="introduction-text">
-                Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas
-                enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar.
-                Essas pessoas são conhecidas como <span class="hunter">Hunters</span>.
-            </p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="introduction-title">Introdução</h2>
+                        <p class="introduction-text">
+                            Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas
+                            enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar.
+                            Essas pessoas são conhecidas como <span class="hunter">Hunters</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!--  Créditos  -->
+        <!-- Rodapé -->
         <footer class="credits reveal">
-            <p>
-                Projeto conceitual desenvolvido por <a class="link-rodape" href="https://github.com/Cayo13y"
-                    target="_blank">Cayo
-                    B.Gomes</a>.<br>
-                Feito para fins educacionais e portfólio.
-            </p>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>
+                            Projeto conceitual desenvolvido por <a class="link-rodape" href="https://github.com/Cayo13y" target="_blank">Cayo B.Gomes</a>.<br>
+                            Feito para fins educacionais e portfólio.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </main>
 
-    <!-- ======== JavaScript Principal ======== -->
-    <script src="scripts/pagina inicial/pagina_inicial.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- === JavaScript da tela de abertura === -->
-    <script src="scripts/pagina inicial/tela_abertura.js"></script>
+    <!-- JavaScripts do projeto -->
+    <script src="scripts/tela_abertura.js"></script>
+    <script src="scripts/faixa_video.js"></script>
+    <script src="scripts/animacao.js"></script>
 
-    <!-- ===== JavaScript do Menu Lateral ===== -->
-    <script src="scripts/menu/menu_lateral.js"></script>
-
-    <!-- ==== JavaScript da Faixa de Vídeo ====== -->
-    <script src="scripts/pagina inicial/faixa_video.js"></script>
-
-    <!-- JavaScript da Animação -->
-    <script src="scripts/pagina inicial/animacao.js"></script>
-    
 </body>
 </html>
