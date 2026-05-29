@@ -13,6 +13,7 @@
 
     <!-- ARQUIVO CSS -->
     <link rel="stylesheet" href="styles/pagina_inicial.css">
+    <link rel="stylesheet" href="styles/footer.css">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -34,33 +35,7 @@
     </div>
 
     <!-- ================== Menu Lateral Fixo ================== -->
-    <input type="checkbox" id="menu-toggle">
-
-    <label for="menu-toggle" class="menu-button">
-        <span class="bar top"></span>
-        <span class="bar middle"></span>
-        <span class="bar bottom"></span>
-        <div class="side-line"></div>
-    </label>
-
-    <aside>
-        <div class="aside-section aside-left"></div>
-
-        <div class="aside-section aside-right">
-            <ul class="aside-list">
-                <li data-number="01"><a href="index.html">Introdução</a></li>
-                <li data-number="02"><a href="#">História</a></li>
-                <li data-number="03"><a href="#">Personagens</a></li>
-                <li data-number="04"><a href="#">Trilha Sonora</a></li>
-                <li data-number="05"><a href="#">Autor</a></li>
-                <li data-number="06"><a href="#">Sistema de Poder</a></li>
-            </ul>
-
-            <div class="menu-background-image">
-                <img src="assets/images/gon_menu.png" alt="Gon Freecss">
-            </div>
-        </div>
-    </aside>
+    <div id="menu-placeholder"></div>
 
     <!-- ================= Conteúdo Principal ================== -->
     <main class="main-content">
@@ -138,18 +113,8 @@
         </section>
 
         <!-- Rodapé -->
-        <footer class="credits reveal">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p>
-                            Projeto conceitual desenvolvido por <a class="link-rodape" href="https://github.com/Cayo13y" target="_blank">Cayo B.Gomes</a>.<br>
-                            Feito para fins educacionais e portfólio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
+
     </main>
 
     <!-- BOOTSTRAP JS -->
@@ -159,6 +124,7 @@
     <script src="scripts/tela_abertura.js"></script>
     <script src="scripts/faixa_video.js"></script>
     <script src="scripts/animacao.js"></script>
+    <script src="scripts/components.js"></script>
 
 </body>
 </html>

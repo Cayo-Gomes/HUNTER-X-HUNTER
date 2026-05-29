@@ -1,0 +1,36 @@
+/* ======================= RODAPÉ ======================== */
+.credits {
+    width: calc(100vw - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--cor-branco);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.credits p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2;
+}
+
+.link-rodape {
+    text-decoration: underline;
+    font-weight: bold;
+    transition: 0.3s;
+}
+/*=========================================================*/
+
+/* Mobile (≤ 768px) */
+@media (max-width: 768px) {
+
+    /* Rodapé */
+    .credits {
+        width: 100vw;
+        margin-left: 0;
+    }
+
+    .credits p {
+        font-size: 12px;
+    }
+}
