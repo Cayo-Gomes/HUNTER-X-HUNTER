@@ -4,8 +4,8 @@ async function loadComponent(id, file) {
 
     document.getElementById(id).innerHTML = html;
 
-    // reaplica reveal nos novos elementos
     activateReveal();
+    window.applyTranslations?.();
 }
 
 loadComponent('menu-placeholder', 'components/menu.html');

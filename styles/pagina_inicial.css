@@ -137,17 +137,21 @@ body.modal-open {
 
 
 /* ====================== ANIMAÇÕES ====================== */
+/* ====================== ANIMAÇÕES SUAVES e FLUIDAS ====================== */
 .reveal {
     opacity: 0;
-    transform: translateY(60px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Em vez de subir reto, usamos um leve scale (96%) junto com uma subida menor (20px) */
+    transform: translateY(20px) scale(0.96); 
+    will-change: transform, opacity;
+    /* Mudamos para 0.9s com uma curva bezier personalizada (suave no início, desacelera elegantemente no final) */
+    transition: 
+        opacity 0.9s ease, 
+        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); 
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1); /* Volta ao tamanho e posição original de forma orgânica */
 }
 
 .aside-list li {
@@ -268,7 +272,8 @@ body::after {
     transition: 0.7s;
 }
 
-.language-switch button:hover {
+.language-switch button:hover,
+.language-switch button.lang-active {
     background-color: var(--cor-preto);
     color: var(--cor-branco);
 }

@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "title": "Projeto Hunter x Hunter"
+    },
+    "hero": {
+        "subtitle": "Entre luz e sombra, eu avanço. <br>Inspirado por <a class=\"togashi-link\" href=\"https://pt.wikipedia.org/wiki/Yoshihiro_Togashi\" target=\"_blank\">Yoshihiro Togashi</a>."
+    },
+    "intro": {
+        "title": "Introdução",
+        "text": "Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar. Essas pessoas são conhecidas como <span class=\"hunter\">Hunters</span>."
+    },
+    "nav": {
+        "intro": "Introdução",
+        "historia": "História",
+        "personagens": "Personagens",
+        "trilha": "Trilha Sonora",
+        "autor": "Autor",
+        "sistema": "Sistema de Poder"
+    },
+    "footer": {
+        "credits": "Projeto conceitual desenvolvido por <a class=\"link-rodape\" href=\"https://github.com/Cayo13y\" target=\"_blank\">Cayo B.Gomes</a>.<br>Feito para fins educacionais e portfólio."
+    }
+}

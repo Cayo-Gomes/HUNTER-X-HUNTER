@@ -45,8 +45,8 @@
 
             <!-- Idioma -->
             <div class="language-switch">
-                <button>PT</button>
-                <button>EN</button>
+                <button data-lang="pt" onclick="setLang('pt')">PT</button>
+                <button data-lang="en" onclick="setLang('en')">EN</button>
             </div>
 
             <!-- Bootstrap Grid para o hero -->
@@ -65,7 +65,7 @@
                         <div class="hero-info">
                             <div class="logo-text">
                                 <img class="logo-HxH" src="assets/images/logo-preto-e-branco.png" alt="hunter-x-hunter-logo-PeB">
-                                <p>Entre luz e sombra, eu avanço. <br>Inspirado por
+                                <p data-i18n-html="hero.subtitle">Entre luz e sombra, eu avanço. <br>Inspirado por
                                     <a class="togashi-link" href="https://pt.wikipedia.org/wiki/Yoshihiro_Togashi" target="_blank">Yoshihiro Togashi</a>.
                                 </p>
                             </div>
@@ -101,8 +101,8 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="introduction-title">Introdução</h2>
-                        <p class="introduction-text">
+                        <h2 class="introduction-title" data-i18n="intro.title">Introdução</h2>
+                        <p class="introduction-text" data-i18n-html="intro.text">
                             Em um mundo vasto e perigoso, existem pessoas que dedicam suas vidas a explorar o desconhecido. Elas
                             enfrentam feras lendárias, desvendam mistérios proibidos e caçam tesouros que poucos ousariam procurar.
                             Essas pessoas são conhecidas como <span class="hunter">Hunters</span>.
@@ -125,6 +125,7 @@
     <script src="scripts/faixa_video.js"></script>
     <script src="scripts/animacao.js"></script>
     <script src="scripts/components.js"></script>
+    <script src="scripts/i18n.js"></script>
 
 </body>
 </html>
